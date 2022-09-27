@@ -5,7 +5,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -23,8 +23,7 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        //rekordok feltöltése
-        User::create(['name'=>'Marcsi','email'=>'diak1@gmail.com']);
+        User::create(['name'=>'store','email'=>'store@gmail.com']);
         User::create(['name'=>'Iván','email'=>'diak2@gmail.com']);
     }
 
@@ -37,4 +36,4 @@ return new class extends Migration
     {
         Schema::dropIfExists('users');
     }
-};
+}
